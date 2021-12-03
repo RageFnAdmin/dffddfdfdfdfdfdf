@@ -4531,7 +4531,7 @@ end)
             local page3 = venyx:addPage("Aimbot", 5012544693)
             
             local Farm = page3:addSection("Silent Aim")
-            Farm:addButton("Silent Aim", function()
+            page3:addButton("Silent Aim", function()
                 -- Credits to integerisqt!
 -- Have a great day!
 local Players = game:GetService("Players")
@@ -4641,3 +4641,195 @@ setreadonly(MT, true)
                 end
 
 
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                if game.PlaceId == 443406476 then
+                    local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))() --someone reuploaded it so I put it in place of the original back up so guy can get free credit.
+                    local venyx = library.new("Vex Hub: Projekt Lazarus", 5013109572)
+
+
+
+
+                 
+   
+local section1 = venyx:addPage("Main", 8162117119)
+                     local section1 = section1:addSection("Main")
+
+
+
+                    
+                    section1:addButton("One shot Zombies", function()
+                        hookfunction(gcinfo, function()
+                            return math.random(200,350)
+                         end)
+                         
+                         -- // Constants \\ --
+                         -- [ Services ] --
+                         local Services = setmetatable({}, {__index = function(Self, Index)
+                            local NewService = game:GetService(Index)
+                            if NewService then
+                                Self[Index] = NewService
+                            end
+                            return NewService
+                         end})
+                         
+                         -- [ LocalPlayer ] --
+                         local LocalPlayer = Services.Players.LocalPlayer
+                         
+                         -- // Variables \\ --
+                         local Connections = {
+                            Weapon1 = nil;
+                            Weapon2 = nil;
+                            Weapon3 = nil;
+                            Backpack = nil;
+                         }
+                         
+                         local RoundNumber = workspace.RoundNum
+                         
+                         -- // Functions \\ --
+                         local function CharacterAdded(Character)
+                            local Backpack = LocalPlayer:WaitForChild('Backpack')
+                         
+                            local function ChildAdded(Child)
+                                if Child.Name == "Weapon1" or Child.Name == "Weapon2" or Child.Name == "Weapon3" then
+                                    local Module = require(Child)
+                                    
+                                    if Connections[Child.Name] then
+                                        Connections[Child.Name]:Disconnect()
+                                        Connections[Child.Name] = nil
+                                    end
+                         
+                                    Connections[Child.Name] = Services.RunService.RenderStepped:Connect(function()
+                                        Module.Ammo = Module.MagSize + 1
+                                        Module.StoredAmmo = Module.MaxAmmo
+                                        Module.HeadShot = 150 + (RoundNumber.Value * 150)
+                                        Module.TorsoShot = 150 + (RoundNumber.Value * 150)
+                                        Module.LimbShot = 150 + (RoundNumber.Value * 150)
+                                        Module.BulletPenetration = 10
+                                    end)
+                                end
+                            end
+                         
+                            if Connections.Backpack then
+                                Connections.Backpack:Disconnect()
+                                Connections.Backpack = nil
+                            end
+                         
+                            for i,v in ipairs(Backpack:GetChildren()) do
+                                ChildAdded(v)
+                            end
+                            Connections.Backpack = Backpack.ChildAdded:Connect(ChildAdded)
+                         end
+                         
+                         -- // Event Listeners \\ --
+                         LocalPlayer.CharacterAdded:Connect(CharacterAdded)
+                         CharacterAdded(LocalPlayer.Character)
+                         
+                         -- // Metatable \\ --
+                         local RawMetatable = getrawmetatable(game)
+                         local __Namecall = RawMetatable.__namecall
+                         
+                         setreadonly(RawMetatable, false)
+                         
+                         RawMetatable.__namecall = newcclosure(function(Object, ...)
+                            local NamecallMethod = getnamecallmethod()
+                            local Arguments = {...}
+                         
+                            if typeof(Object) == "Instance" and Object.IsA(Object, "RemoteEvent") then
+                                if tostring(Object) == "Damage" and NamecallMethod == "FireServer" then
+                                    Arguments[1].Damage = Arguments[1].BodyPart.Parent.Humanoid.MaxHealth + 10
+                                end
+                            end
+                         
+                            return __Namecall(Object, unpack(Arguments))
+                         end)
+                         
+                         setreadonly(RawMetatable, true)
+                         
+                         -- // Actions \\ --
+                         --LocalPlayer.Character.Health:Destroy()
+                        end)
+
+
+
+
+
+
+                    local page5 = venyx:addPage("Credits", 5012544693)
+                    local Discord = page5:addSection("Discord")
+                    
+                    
+                    Discord:addButton("Copy Discord Link", function()
+                        setclipboard("https://discord.gg/JdEK5qN7Yb")
+                    end)
+                    local Discord = page5:addSection("Credits")
+                    local d = page5:addSection("Made by: Leon!#0831")
+                    local d = page5:addSection("Scripter: Leon!#0831")
+                
+                
+                
+                
+                
+                
+                
+                    -- themes
+                    local themes = {
+                        Background = Color3.fromRGB(24, 24, 24),
+                        Glow = Color3.fromRGB(0, 0, 0),
+                        Accent = Color3.fromRGB(10, 10, 10),
+                        LightContrast = Color3.fromRGB(20, 20, 20),
+                        DarkContrast = Color3.fromRGB(14, 14, 14),
+                        TextColor = Color3.fromRGB(255, 255, 255)
+                        }
+                        
+                            
+                        -- Theme page
+                        local settings = venyx:addPage("Settings", 5012544693)
+                        local colors = settings:addSection("Colors")
+                        local setting = settings:addSection("Settings")
+                        
+                        setting:addKeybind("Show/Hide Settings", Enum.KeyCode.P, function()
+                        print("Activated Keybind")
+                        venyx:toggle()
+                        end, function()
+                        print("Changed Keybind")
+                        end)
+                        
+                        for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+                        colors:addColorPicker(theme, color, function(color3)
+                        venyx:setTheme(theme, color3)
+                        end)
+                        end
+                        
+                    -- load
+                        venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
+                        end
