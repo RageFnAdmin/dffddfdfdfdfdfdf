@@ -3809,25 +3809,6 @@ end)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-            
-        
-        
-            if game.PlaceId == 914010731 then
-
             local page5 = venyx:addPage("Credits", 5012544693)
             local Discord = page5:addSection("Discord")
             
@@ -4004,21 +3985,13 @@ end)
 
 
 
-
-                if game.PlaceId == 3101667897 then
-                    local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))() --someone reuploaded it so I put it in place of the original back up so guy can get free credit.
-                    local venyx = library.new("Vex Hub: Legends Of Speed", 5013109572)
-
+            if game.PlaceId == 3101667897 then
+            local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))() --someone reuploaded it so I put it in place of the original back up so guy can get free credit.
+            local venyx = library.new("Vex Hub: Legend Of Speed", 5013109572)
 
 
 
-
-
-
-
-
-                   
-                    local page2 = venyx:addPage("AutoFarm", 5012544693)
+local page2 = venyx:addPage("AutoFarm", 5012544693)
                     local Farm = page2:addSection("Speed and Level Farm")
 local RANKUP
     Farm:addToggle("AutoFarm", nil, function(bool)
@@ -4083,9 +4056,9 @@ end)
 
                     local page2 = venyx:addPage("Esp", 5012544693)
                     
-                    local Farm = page2:addSection("Player Esp")
+                    local Farm1 = page2:addSection("Player Esp")
                     local RANKUP
-                    Farm:addToggle("Esp", nil, function(bool)
+                    Farm1:addToggle("Esp", nil, function(bool)
                         local MainParent = game.workspace.Terrain or nil
 local LineFrame = Instance.new("ScreenGui",MainParent)
 LineFrame.Name = "Lines"
@@ -4434,19 +4407,6 @@ end)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
             local page5 = venyx:addPage("Credits", 5012544693)
             local Discord = page5:addSection("Discord")
             
@@ -4492,48 +4452,10 @@ end)
                 venyx:setTheme(theme, color3)
                 end)
                 end
-            
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 
+            -- load
+                venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
+                end
+
+
+
