@@ -4833,3 +4833,195 @@ local section1 = venyx:addPage("Main", 8162117119)
                     -- load
                         venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
                         end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        if game.PlaceId == 192800 then
+                            local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))() --someone reuploaded it so I put it in place of the original back up so guy can get free credit.
+                            local venyx = library.new("Vex Hub: Work At A Pizza Place", 5013109572)
+
+
+    local section1 = venyx:addPage("Farming", 8162117119)
+    local section1 = section1:addSection("Farming")
+
+
+
+    section1:addButton("Auto Farm", function()
+        if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+            for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                if v.Name:len() == 2 then
+                    v.Parent = game.Players.LocalPlayer.Character
+                end
+            end
+            
+            wait()
+            
+            local item = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name
+            
+                    for i,v in pairs(game.Workspace.Houses:GetChildren()) do
+                        for i,v in pairs(v:GetChildren()) do
+                            if v.Name == "Address" then
+                                print(v.Value)
+                                if v.Value == item then
+                                    for i,v in pairs(v.Parent.Upgrades:GetChildren()) do
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.Parent.Upgrades[v.Name].Doors.FrontDoorMain.DoorTouch.CFrame * CFrame.new(-5, 0, 0)
+                                        wait(8)
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(64.7216568, 6.63000107, -11.3157063)
+                                        wait(1)
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(58.4695549, 6.63000107, -9.41764355)
+                                        wait(1)
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(68.068222, 6.63000107, -7.46636343)
+                                        wait(1)
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(68.9409561, 6.62999964, -11.2087212)
+                                        wait(1)
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(64.0699768, 6.63000107, -11.5208979)
+                                        wait(0.5)
+                                        wait(1)
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(59.1558762, 6.63000107, -7.64516211)
+                                    end
+                                end
+                            end
+                        end
+                    end
+        else
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(64.7216568, 6.63000107, -11.3157063)
+            wait(1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(58.4695549, 6.63000107, -9.41764355)
+            wait(1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(68.068222, 6.63000107, -7.46636343)
+            wait(1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(68.9409561, 6.62999964, -11.2087212)
+            wait(1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(64.0699768, 6.63000107, -11.5208979)
+            wait(0.5)
+            wait(1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(59.1558762, 6.63000107, -7.64516211)
+            
+        end
+    
+
+        end)
+
+
+
+
+        
+            
+            
+
+
+
+        section1:addButton("Delete all Players", function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/BlastingStone/MyLuaStuff/master/WaaPPEraser.lua"))()
+            end)
+
+            
+
+
+
+
+
+
+
+                            local page5 = venyx:addPage("Credits", 5012544693)
+                    local Discord = page5:addSection("Discord")
+                    
+                    
+                    Discord:addButton("Copy Discord Link", function()
+                        setclipboard("https://discord.gg/JdEK5qN7Yb")
+                    end)
+                    local Discord = page5:addSection("Credits")
+                    local d = page5:addSection("Made by: Leon!#0831")
+                    local d = page5:addSection("Scripter: Leon!#0831")
+                
+                
+                
+                
+                
+                
+                
+                    -- themes
+                    local themes = {
+                        Background = Color3.fromRGB(24, 24, 24),
+                        Glow = Color3.fromRGB(0, 0, 0),
+                        Accent = Color3.fromRGB(10, 10, 10),
+                        LightContrast = Color3.fromRGB(20, 20, 20),
+                        DarkContrast = Color3.fromRGB(14, 14, 14),
+                        TextColor = Color3.fromRGB(255, 255, 255)
+                        }
+                        
+                            
+                        -- Theme page
+                        local settings = venyx:addPage("Settings", 5012544693)
+                        local colors = settings:addSection("Colors")
+                        local setting = settings:addSection("Settings")
+                        
+                        setting:addKeybind("Show/Hide Settings", Enum.KeyCode.P, function()
+                        print("Activated Keybind")
+                        venyx:toggle()
+                        end, function()
+                        print("Changed Keybind")
+                        end)
+                        
+                        for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+                        colors:addColorPicker(theme, color, function(color3)
+                        venyx:setTheme(theme, color3)
+                        end)
+                        end
+                        
+                    -- load
+                        venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
+                        end
+        
