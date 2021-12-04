@@ -5025,3 +5025,339 @@ local section1 = venyx:addPage("Main", 8162117119)
                         venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
                         end
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        if game.PlaceId == 4520749081 then
+                            local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))() --someone reuploaded it so I put it in place of the original back up so guy can get free credit.
+                            local venyx = library.new("Vex Hub: King Legacy", 5013109572)
+                        
+                            local section1 = venyx:addPage("Farming", 8162117119)
+                            local section1 = section1:addSection("Farming")
+
+
+
+
+
+
+
+
+
+
+
+                            local page5 = venyx:addPage("Credits", 5012544693)
+                    local Discord = page5:addSection("Discord")
+                    
+                    
+                    Discord:addButton("Copy Discord Link", function()
+                        setclipboard("https://discord.gg/JdEK5qN7Yb")
+                    end)
+                    local Discord = page5:addSection("Credits")
+                    local d = page5:addSection("Made by: Leon!#0831 and Zerio#0880")
+                    local d = page5:addSection("Scripter: Zerio#0880")
+                
+                
+                
+                
+                
+                
+                
+                    -- themes
+                    local themes = {
+                        Background = Color3.fromRGB(24, 24, 24),
+                        Glow = Color3.fromRGB(0, 0, 0),
+                        Accent = Color3.fromRGB(10, 10, 10),
+                        LightContrast = Color3.fromRGB(20, 20, 20),
+                        DarkContrast = Color3.fromRGB(14, 14, 14),
+                        TextColor = Color3.fromRGB(255, 255, 255)
+                        }
+                        
+                            
+                        -- Theme page
+                        local settings = venyx:addPage("Settings", 5012544693)
+                        local colors = settings:addSection("Colors")
+                        local setting = settings:addSection("Settings")
+                        
+                        setting:addKeybind("Show/Hide Settings", Enum.KeyCode.P, function()
+                        print("Activated Keybind")
+                        venyx:toggle()
+                        end, function()
+                        print("Changed Keybind")
+                        end)
+                        
+                        for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+                        colors:addColorPicker(theme, color, function(color3)
+                        venyx:setTheme(theme, color3)
+                        end)
+                        end
+                        
+                    -- load
+                        venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
+                        end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        if game.PlaceId == 2753915549 then
+                            local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))() --someone reuploaded it so I put it in place of the original back up so guy can get free credit.
+                            local venyx = library.new("Vex Hub: Blox Fruits", 5013109572)
+                        
+                            local section1 = venyx:addPage("Farming", 8162117119)
+                            local section1 = section1:addSection("Farming")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            local page5 = venyx:addPage("Credits", 5012544693)
+                    local Discord = page5:addSection("Discord")
+                    
+                    
+                    Discord:addButton("Copy Discord Link", function()
+                        setclipboard("https://discord.gg/JdEK5qN7Yb")
+                    end)
+                    local Discord = page5:addSection("Credits")
+                    local d = page5:addSection("Made by: Leon!#0831 and Zerio#0880")
+                    local d = page5:addSection("Scripter: Zerio#0880")
+                
+                
+                
+                
+                
+                
+                
+                    -- themes
+                    local themes = {
+                        Background = Color3.fromRGB(24, 24, 24),
+                        Glow = Color3.fromRGB(0, 0, 0),
+                        Accent = Color3.fromRGB(10, 10, 10),
+                        LightContrast = Color3.fromRGB(20, 20, 20),
+                        DarkContrast = Color3.fromRGB(14, 14, 14),
+                        TextColor = Color3.fromRGB(255, 255, 255)
+                        }
+                        
+                            
+                        -- Theme page
+                        local settings = venyx:addPage("Settings", 5012544693)
+                        local colors = settings:addSection("Colors")
+                        local setting = settings:addSection("Settings")
+                        
+                        setting:addKeybind("Show/Hide Settings", Enum.KeyCode.P, function()
+                        print("Activated Keybind")
+                        venyx:toggle()
+                        end, function()
+                        print("Changed Keybind")
+                        end)
+                        
+                        for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+                        colors:addColorPicker(theme, color, function(color3)
+                        venyx:setTheme(theme, color3)
+                        end)
+                        end
+                        
+                    -- load
+                        venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
+                        end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        if game.PlaceId == 221718525 then
+                            local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))() --someone reuploaded it so I put it in place of the original back up so guy can get free credit.
+                            local venyx = library.new("Vex Hub: Ninja Tycoon", 5013109572)
+                        
+                            local section1 = venyx:addPage("Farming", 817160385817119)
+                            local section1 = section1:addSection("Farming")
+
+
+
+                            section1:addButton("Auto Click on Convery", function()
+                                function getTycoon()
+                                    for i,v in pairs(game:GetService("Workspace")["Zednov's Tycoon Kit"].Tycoons:GetChildren()) do
+                                        if v.Owner.Value == game:GetService("Players").LocalPlayer then
+                                            return v
+                                        end
+                                    end
+                                    return nil
+                                end
+                                 
+                                local tycoon = getTycoon()
+                                if tycoon == nil then
+                                    repeat wait(0.5) tycoon = getTycoon() until tycoon ~= nil
+                                end
+                                 
+                                repeat wait() until tycoon:FindFirstChild("PurchasedObjects") ~= nil
+                                repeat wait() until tycoon.PurchasedObjects:FindFirstChild("Mine") ~= nil
+                                 
+                                while true do
+                                    fireclickdetector(tycoon.PurchasedObjects.Mine.Clicker.ClickDetector)
+                                    wait()
+                                end
+                            end)
+
+
+
+                           
+
+
+
+
+
+
+                            
+
+
+
+
+
+
+
+
+                            local page5 = venyx:addPage("Credits", 5012544693)
+                    local Discord = page5:addSection("Discord")
+                    
+                    
+                    Discord:addButton("Copy Discord Link", function()
+                        setclipboard("https://discord.gg/JdEK5qN7Yb")
+                    end)
+                    local Discord = page5:addSection("Credits")
+                    local d = page5:addSection("Made by: Leon!#0831 and Zerio#0880")
+                    local d = page5:addSection("Scripter: Zerio#0880")
+                
+                
+                
+                
+                
+                
+                
+                    -- themes
+                    local themes = {
+                        Background = Color3.fromRGB(24, 24, 24),
+                        Glow = Color3.fromRGB(0, 0, 0),
+                        Accent = Color3.fromRGB(10, 10, 10),
+                        LightContrast = Color3.fromRGB(20, 20, 20),
+                        DarkContrast = Color3.fromRGB(14, 14, 14),
+                        TextColor = Color3.fromRGB(255, 255, 255)
+                        }
+                        
+                            
+                        -- Theme page
+                        local settings = venyx:addPage("Settings", 8087082660)
+                        local colors = settings:addSection("Colors")
+                        local setting = settings:addSection("Settings")
+                        
+                        setting:addKeybind("Show/Hide Settings", Enum.KeyCode.P, function()
+                        print("Activated Keybind")
+                        venyx:toggle()
+                        end, function()
+                        print("Changed Keybind")
+                        end)
+                        
+                        for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+                        colors:addColorPicker(theme, color, function(color3)
+                        venyx:setTheme(theme, color3)
+                        end)
+                        end
+                        
+                    -- load
+                        venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
+                        end
